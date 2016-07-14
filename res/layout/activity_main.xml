@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnLyPrincipalScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/idBtnStart"
+        style="@style/btnStyleOjoVialBlue"
+        android:onClick="startProcess"
+        android:text="@string/btnStart"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/idBtnStop"
+        style="@style/btnStyleOjoVial"
+        android:onClick="stopProcess"
+        android:text="@string/btnStop"
+        android:textAllCaps="false" />
+
+</LinearLayout>
