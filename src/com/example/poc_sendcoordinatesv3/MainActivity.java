@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.poc_sendcoordinatesv3.services.CoordinateService;
 import com.example.poc_sendcoordinatesv3.services.impl.CoordinateServiceImpl;
@@ -21,6 +22,7 @@ public class MainActivity extends ActionBarActivity {
 	final static DateFormat fmt = DateFormat.getTimeInstance(DateFormat.LONG);
 	String valueLong="",valueLat="";
 	Handler handler = new Handler();
+	int numberRequest=0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,8 +35,13 @@ public class MainActivity extends ActionBarActivity {
 	      // Do something here on the main thread
 	    	System.out.println("ESTE ES UN CRON");
 	    	getCurrentLocation();
+	    	numberRequest++;
+	    	System.out.println("Empezo de Request N° : "+numberRequest);
+	    	Toast.makeText(MainActivity.this, "Empezo de Request N° : "+numberRequest, Toast.LENGTH_SHORT).show();
 	    	new RegisterService().execute();
-	    	handler.postDelayed(runnableCode, 3000);
+	    	System.out.println("Se termino el  Request N°: "+numberRequest);
+	    	Toast.makeText(MainActivity.this, "Se termino el  Request N°: "+numberRequest, Toast.LENGTH_SHORT).show();
+	    	handler.postDelayed(runnableCode, 4000);
 	    }
 	};
 	

@@ -27,7 +27,6 @@ public class CoordinateServiceImpl implements CoordinateService{
 		// in milliseconds which is the timeout for waiting for data.
 		int timeoutSocket = 2000;
 		HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
-		System.out.println("Es de 3 segundo....!!");
 		
 		HttpClient httpClient = new DefaultHttpClient(httpParameters);
 		HttpPost post = new HttpPost(CommonConstants.URLService.REGISTER_COORDINATE);
