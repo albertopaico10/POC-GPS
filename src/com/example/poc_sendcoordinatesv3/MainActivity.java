@@ -36,11 +36,11 @@ public class MainActivity extends ActionBarActivity {
 	    	System.out.println("ESTE ES UN CRON");
 	    	getCurrentLocation();
 	    	numberRequest++;
-	    	System.out.println("Empezo de Request N° : "+numberRequest);
-	    	Toast.makeText(MainActivity.this, "Empezo de Request N° : "+numberRequest, Toast.LENGTH_SHORT).show();
+	    	System.out.println("Empezo de Request Nï¿½ : "+numberRequest);
+	    	Toast.makeText(MainActivity.this, "Empezo de Request Nï¿½ : "+numberRequest, Toast.LENGTH_SHORT).show();
 	    	new RegisterService().execute();
-	    	System.out.println("Se termino el  Request N°: "+numberRequest);
-	    	Toast.makeText(MainActivity.this, "Se termino el  Request N°: "+numberRequest, Toast.LENGTH_SHORT).show();
+	    	System.out.println("Se termino el  Request Nï¿½: "+numberRequest);
+	    	Toast.makeText(MainActivity.this, "Se termino el  Request Nï¿½: "+numberRequest, Toast.LENGTH_SHORT).show();
 	    	handler.postDelayed(runnableCode, 4000);
 	    }
 	};
@@ -97,36 +97,6 @@ public class MainActivity extends ActionBarActivity {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			
-//			if(!resultServices){
-//				methodError(getString(R.string.connectionRefused));
-//			}else{
-//				JSONObject jObject = null;
-//				try {
-//					jObject = new JSONObject(Content);
-//					String codeResponse = jObject.getString("codeResponse");
-//					String email = jObject.getString("additional");
-//					int idUser = jObject.getInt("idUser");
-//					System.out.println("codeResponse : "+codeResponse+"************++");
-//					if(CommonConstants.CodeResponse.RESPONSE_SUCCESS_VALIDATION.equals(codeResponse)){
-//						try {
-//							loginService.sucessLogin(String.valueOf(idUser), email,dbBalletPaper);	
-//							Intent i = new Intent(LoginActivity.this, PrincipalMainActivity.class);
-//							startActivity(i);
-//						} catch (Exception e) {
-//							methodError(getString(R.string.errorInGeneral));
-//						}
-//					}else if(CommonConstants.CodeResponse.RESPONSE_FAIL_VALIDATION.equals(codeResponse)){
-//						methodError(getString(R.string.validationFail));
-//					}else if(CommonConstants.CodeResponse.RESPONSE_EMAIL_NOT_EXIST.equals(codeResponse)){
-//						methodError(getString(R.string.emailNotExit));
-//					}
-//				} catch (Exception e) {
-//					methodError(getString(R.string.errorUser)+e+getString(R.string.sorryMessages));
-//				}
-//			}
-//			linearLayoutForm.setVisibility(View.VISIBLE);
-//			linearLayoutProgress.setVisibility(View.GONE);	
 		}
 	}
 
